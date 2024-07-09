@@ -1,5 +1,51 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  max-width: 1024px;
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 0 13px;
+  color: #ff0070;
+  font-family: "IBM Plex mono";
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: lowercase;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid #ff0070;
+}
+
+.header__title {
+  color: #db00ff;
+  font-family: "IBM Plex mono";
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 129.53px;
+  text-transform: lowercase;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  color: #000028;
+  font-family: "IBM Plex mono";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: #ff0070;
 }

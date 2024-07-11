@@ -1,24 +1,33 @@
 .page {
+  background-color: var(--accent-color-dark-theme);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-attachment: fixed;
 }
 
 .header {
-  max-width: 1024px;
+  width: 1024px;
   background-image: url(../images/cover-image-dark.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__theme-menu {
+  align-self: center;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .header__theme-menu-button {
   border: none;
-  padding: 0 13px;
-  color: #ff0070;
+  padding: 0 13px 2px;
+  color: var(--accent-color);
   font-family: "IBM Plex mono";
   font-weight: 400;
   font-size: 18px;
@@ -28,7 +37,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid #ff0070;
+  outline: 1px solid var(--accent-color);
 }
 
 .header__title {
@@ -41,11 +50,83 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
+@media(width <= 375px){
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
 .header__text {
   color: #000028;
   font-family: "IBM Plex mono";
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  background-color: #ff0070;
+  background-color: var(--accent-color);
+  width: 491px;
+  min-height: 71px;
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.image-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 315px);
+  grid-template-rows: repeat(3, 315px);
+  gap: 20px;
+  grid-template-areas: 
+    "sunset  sunset  ice-cream"
+    "tape    books   ice-cream"
+    "tape    street  street";
+}
+
+.image-gallery-container_sunset {
+  background-image: url(../images/sunset.png);
+  background-size: cover;
+  background-position: center;
+  grid-area: sunset;
+}
+
+.image-gallery-container_ice-cream {
+  background-image: url(../images/ice-cream.png);
+  background-size: cover;
+  background-position: center;
+  grid-area: ice-cream;
+}
+
+.image-gallery-container_tape {
+  background-image: url(../images/tape.png);
+  background-size: cover;
+  background-position: center;
+  grid-area: tape;
+}
+
+.image-gallery-container_books {
+  background-image: url(../images/books.png);
+  background-size: cover;
+  background-position: center;
+  grid-area: books;
+}
+
+.image-gallery-container_street {
+  background-image: url(../images/street.png);
+  background-size: cover;
+  background-position: center;
+  grid-area: street;
+}
+
+.footer__title {
+  color: #db00ff;
+  font-family: "IBM Plex mono";
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 129.53px;
+  text-transform: lowercase;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media(width <= 375px){
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }

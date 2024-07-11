@@ -1,3 +1,7 @@
+:root {
+  --accent-color: #ff0070;
+}
+
 .page {
   background-color: var(--accent-color-dark-theme);
   display: flex;
@@ -7,6 +11,7 @@
 }
 
 .header {
+  position: relative;
   width: 1024px;
   background-image: url(../images/cover-image-dark.png);
   display: flex;
@@ -42,7 +47,7 @@
 
 .header__title {
   color: #db00ff;
-  font-family: "IBM Plex mono";
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 129.53px;
@@ -58,7 +63,7 @@
 
 .header__text {
   color: #000028;
-  font-family: "IBM Plex mono";
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -67,6 +72,55 @@
   min-height: 71px;
   align-self: flex-end;
   margin-right: 20px;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: solid var(--accent-color);
+  border-width: 1px 1px 0 0;
+  z-index: 1;
+  right: 20px;
+  top: 20px;
+}
+
+.header::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: solid var(--accent-color);
+  border-width: 0 0 1px 1px;
+  z-index: 1;
+  left: 20px;
+  bottom: 20px;
+}
+
+.header__rec {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "IBM Plex mono", sans-serif;
+  line-height: 25px;
+  z-index: 1;
+  right: 48px;
+  top: 20px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.header__rec-pulse {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  z-index: 1;
+  right: 29px;
+  top: 28px;
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .image-gallery-container {
@@ -117,7 +171,7 @@
 
 .footer__title {
   color: #db00ff;
-  font-family: "IBM Plex mono";
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 129.53px;

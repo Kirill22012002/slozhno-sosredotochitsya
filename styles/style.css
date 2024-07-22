@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 60px;
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
@@ -229,10 +229,6 @@
   }
 }
 
-.section-why__title {
-  min-width: 236px;
-}
-
 .section-causes {
   display: flex;
   flex-direction: column;
@@ -247,6 +243,10 @@
     margin-bottom: 50px;
     padding: 0 10px;
   }
+}
+
+.section-causes__title {
+  max-width: 315px;
 }
 
 .section-causes__blocks {
@@ -352,7 +352,7 @@
 .image-gallery-container {
   display: grid;
   grid-template-columns: repeat(3, 315px);
-  grid-template-rows: repeat(3, 315px);
+  grid-template-rows: 260px 315px 428px;
   grid-template-areas:
     "sunset  sunset  ice-cream"
     "tape    books   ice-cream"

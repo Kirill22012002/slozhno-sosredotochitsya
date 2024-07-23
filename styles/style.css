@@ -336,6 +336,16 @@
   line-height: 23.4px;
 }
 
+.images-gallery {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 375px) {
+  .images-gallery {
+    margin-bottom: 40px;
+  }
+}
+
 .images-gallery-title {
   margin-bottom: 20px;
   background-color: var(--accent-color);

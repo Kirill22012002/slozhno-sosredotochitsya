@@ -1,5 +1,8 @@
 :root {
   --accent-color: #ff0070;
+  --accent-color-theme-dark-title: #db00ff;
+  --accent-color-theme-dark-text: #f1b2ce;
+  --accent-color-theme-dark-header-text: #000028;
 }
 
 .page {
@@ -89,7 +92,7 @@
 
 .header__title {
   margin-bottom: 114px;
-  color: #db00ff;
+  color: var(--accent-color-theme-dark-title);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -117,7 +120,7 @@
   min-height: 71px;
   margin-right: 20px;
   margin-bottom: 134px;
-  color: #000028;
+  color: var(--accent-color-theme-dark-header-text);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -301,7 +304,7 @@
 }
 
 .block-item-text {
-  color: #f1b2ce;
+  color: var(--accent-color-theme-dark-text);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -487,7 +490,7 @@
 }
 
 .footer__title {
-  color: #db00ff;
+  color: var(--accent-color-theme-dark-title);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -496,7 +499,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (width <= 375px) {
+@media (max-width: 375px) {
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }

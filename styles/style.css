@@ -3,6 +3,9 @@
   --accent-color-theme-dark-title: #db00ff;
   --accent-color-theme-dark-text: #f1b2ce;
   --accent-color-theme-dark-header-text: #000028;
+  --button-color: #ff0070;
+  --link-shadow-color: #ff0070;
+  --content-text-color: #f1b2ce;
 }
 
 .page {
@@ -17,6 +20,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  text-shadow: 2px 2px var(--link-shadow-color);
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--content-text-color);
+  }
+  
+  &:focus {
+    outline: 1px solid var(--content-text-color);
+  } 
 }
 
 .header {
@@ -73,20 +96,31 @@
   }
 }
 
+.header__theme-menu-item:hover {
+  outline: 1px solid var(--button-color);
+}
+
 .header__theme-menu-button {
   border: none;
   padding: 0 13px 2px;
-  color: var(--accent-color);
+  color: var(--button-color);
   font-family: "IBM Plex mono";
   font-weight: 400;
   font-size: 18px;
   text-transform: lowercase;
   background-color: inherit;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid;
+    /* компенсация 1px для border, чтобы экран не съезжал вниз */
+    margin-bottom: -1px; 
+  }
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--button-color);
   pointer-events: none;
 }
 

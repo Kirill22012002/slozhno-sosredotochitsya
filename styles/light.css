@@ -14,21 +14,16 @@
   --accent-color-light-theme-title: #ffc2e6;
   --accent-color-light-theme-title-shadow: #ff0070;
   --accent-color-light-theme-background: #fff1f7;
+  --button-color: #353430;
+  --link-shadow-color: #ff8dcb;
+  --content-text-color: #353430;
 
   background-color: var(--accent-color-light-theme-background);
 
   .header {
     background-image: url(../images/cover-image-light.png);
   }
-
-  .header__theme-menu-button {
-    color: var(--accent-color-light-theme);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--accent-color-light-theme);
-  }
-
+  
   .header__title {
     color: var(--accent-color-light-theme-title);
     text-shadow: 4px 4px 0 var(--accent-color);

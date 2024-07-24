@@ -11,6 +11,7 @@
 .page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--accent-color-dark-theme);
   background-attachment: fixed;
@@ -226,18 +227,18 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
-}
 
-.header__rec-pulse {
-  position: absolute;
-  top: 28px;
-  right: 29px;
-  z-index: 1;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  background-color: var(--accent-color);
+  &::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--accent-color);
+    background-color: var(--accent-color);
+    top: 8px;
+    left: 43px;
+  }
 }
 
 .title-decor {

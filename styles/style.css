@@ -1,7 +1,8 @@
 :root {
   --background-color: #000028;
   --accent-color: #ff0070;
-  --accent-color-theme-dark-title: #db00ff;
+  --main-title-color: #db00ff;
+  --main-title-shadow-color: #ff0070;
   --accent-color-theme-dark-text: #f1b2ce;
   --accent-color-theme-dark-header-text: #000028;
   --button-color: #ff0070;
@@ -12,6 +13,7 @@
   --block-item-title: #ff0070;
   --block-item-title-text-color: #000028;
   --background-image-url: url(../images/cover-image-dark.png);
+  --header-rec-state: flex;
 }
 
 .page {
@@ -175,13 +177,13 @@
 
 .header__title {
   margin-bottom: 114px;
-  color: var(--accent-color-theme-dark-title);
+  color: var(--main-title-color);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 129.53px;
   text-transform: lowercase;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--main-title-shadow-color);
 }
 
 @media (max-width: 768px) {
@@ -227,6 +229,7 @@
 }
 
 .header__rec {
+  display: var(--header-rec-state);
   position: absolute;
   top: 20px;
   right: 48px;
@@ -499,13 +502,13 @@
 }
 
 .footer__title {
-  color: var(--accent-color-theme-dark-title);
+  color: var(--main-title-color);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 129.53px;
   text-transform: lowercase;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--main-title-shadow-color);
 }
 
 @media (max-width: 375px) {

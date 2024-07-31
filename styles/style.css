@@ -363,49 +363,21 @@
   gap: 20px;
 }
 
-.image-gallery-container_sunset {
-  grid-area: sunset;
-  background-image: url(../images/sunset.png);
-  background-position: center;
-  background-size: cover;
-}
-
-.image-gallery-container_ice-cream {
-  grid-area: ice-cream;
-  background-image: url(../images/ice-cream.png);
-  background-position: center;
-  background-size: cover;
-}
-
-.image-gallery-container_tape {
-  grid-area: tape;
-  background-image: url(../images/tape.png);
-  background-position: center;
-  background-size: cover;
-}
-
-.image-gallery-container_books {
-  grid-area: books;
-  background-image: url(../images/books.png);
-  background-position: center;
-  background-size: cover;
-}
-
-.image-gallery-container_street {
-  grid-area: street;
-  background-image: url(../images/street.png);
-  background-position: center;
-  background-size: cover;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .image-gallery-container {
     grid-template-columns: repeat(3, 230px);
-    grid-template-rows: repeat(3, 230px);
+    grid-template-rows: 192px 230px 318px;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 745px) {
+  .image-gallery-container {
+    grid-template-columns: repeat(3, 161px);
+    grid-template-rows: 153px 161px 254px;
+  }
+}
+
+@media (max-width: 535px) {
   .image-gallery-container {
     display: flex;
     flex-direction: column;
@@ -436,6 +408,37 @@
     width: 355px;
     height: 237px;
   }
+}
+
+
+.image {
+  background-position: center;
+  background-size: cover;
+}
+
+.image-gallery-container_sunset {
+  grid-area: sunset;
+  background-image: url(../images/sunset.png);
+}
+
+.image-gallery-container_ice-cream {
+  grid-area: ice-cream;
+  background-image: url(../images/ice-cream.png);
+}
+
+.image-gallery-container_tape {
+  grid-area: tape;
+  background-image: url(../images/tape.png);
+}
+
+.image-gallery-container_books {
+  grid-area: books;
+  background-image: url(../images/books.png);
+}
+
+.image-gallery-container_street {
+  grid-area: street;
+  background-image: url(../images/street.png);
 }
 
 .footer {

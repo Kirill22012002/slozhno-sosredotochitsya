@@ -443,19 +443,12 @@
 
 .footer {
   position: relative;
-  padding: 319px 276px;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 463px 204px;
-  }
-}
-
-@media (max-width: 375px) {
-  .footer {
-    padding: 286px 13px;
-  }
+  width: 100%;
+  min-height: 668px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__title {

@@ -23,6 +23,8 @@
   --title-decor-color: #ff0070;
   --block-item-title: #ff0070;
   --block-item-title-text-color: #000028;
+  --images-gallery-title-color: #000028;
+  --block-item-text-color: #ff8dcb;
   --background-image-url: url(../images/cover-image-dark.png);
   --header-rec-state: flex;
 }

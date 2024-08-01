@@ -13,13 +13,15 @@
     --title-decor-color: #ff0070;
     --block-item-title: #ff0070;
     --block-item-title-text-color: #000028;
+    --images-gallery-title-color: #000028;
+    --block-item-text-color: #ff8dcb;
     --background-image-url: url(../images/cover-image-dark.png);
     --header-rec-state: flex;
   }
-} 
+}
 
 @media (prefers-color-scheme: light) {
-  :root { 
+  :root {
     --background-color: #fff1f7;
     --accent-color: #ff8dcb;
     --accent-color-light-theme: #353430;
@@ -32,6 +34,8 @@
     --title-decor-color: #353430;
     --block-item-title: #ff8dcb;
     --block-item-title-text-color: #353430;
+    --images-gallery-title-color: #353430;
+    --block-item-text-color: #000028;
     --background-image-url: url(../images/cover-image-light.png);
     --header-rec-state: none;
   }
@@ -217,7 +221,6 @@
 
 .header-block-item-title {
   justify-self: flex-end;
-  align-self: flex-end;
   align-self: center;
   width: calc(50% - 6px);
   min-height: 71px;
@@ -364,7 +367,7 @@
 }
 
 .block-item-text {
-  color: var(--accent-color-theme-dark-text);
+  color: var(--block-item-text-color);
   font-family: var(--font-family), sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -386,7 +389,7 @@
 }
 
 .images-gallery-title-text {
-  color: var(--accent-color-dark-theme);
+  color: var(--images-gallery-title-color);
   font-family: var(--font-family), sans-serif;
   font-weight: 700;
   font-size: 18px;

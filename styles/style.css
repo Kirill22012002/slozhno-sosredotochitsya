@@ -133,7 +133,7 @@
 }
 
 .header__theme-menu-item:hover {
-  outline: 1px solid var(--button-color);
+  outline: 1px solid var(--button-color-hover);
 }
 
 .header__theme-menu-button {

@@ -4,6 +4,27 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --accent-color-light-theme: #353430;
+    --main-title-color: #ffc2e6;
+    --main-title-shadow-color: #ff0070;
+    --button-color: #353430;
+    --link-shadow-color: #ff8dcb;
+    --content-text-color: #353430;
+    --corners-color: #353430;
+    --title-decor-color: #353430;
+    --block-item-title: #ff8dcb;
+    --block-item-title-text-color: #353430;
+    --images-gallery-title-color: #353430;
+    --block-item-text-color: #000028;
+    --background-image-url: url(../images/cover-image-light.png);
+    --header-rec-state: none;
+  }
+}
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

@@ -71,18 +71,18 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 43px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px var(--accent-color);
-    background-color: var(--accent-color);
-  }
+.header__rec::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 43px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 @media (max-width: 455px) {
@@ -146,13 +146,13 @@
   text-transform: lowercase;
   background-color: inherit;
   cursor: pointer;
+}
 
-  &:focus {
-    /* компенсация 1px для border, чтобы экран не съезжал вниз */
-    margin-bottom: -1px;
-    border-bottom: 1px solid;
-    outline: none;
-  }
+.header__theme-menu-button:focus {
+  /* компенсация 1px для border, чтобы экран не съезжал вниз */
+  margin-bottom: -1px;
+  border-bottom: 1px solid;
+  outline: none;
 }
 
 .header__theme-menu-button_active {
@@ -198,20 +198,20 @@
   position: relative;
   text-decoration: none;
   text-shadow: 2px 2px var(--link-shadow-color);
+}
 
-  &:hover::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--content-text-color);
-  }
+.link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--content-text-color);
+}
 
-  &:focus {
-    outline: 1px solid var(--content-text-color);
-  }
+.link:focus {
+  outline: 1px solid var(--content-text-color);
 }
 
 .block-item-title {
@@ -229,6 +229,7 @@
 .section-content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   flex-basis: 100%;
   gap: 10px;
 }
@@ -302,6 +303,7 @@
 .section-causes__blocks {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -320,6 +322,10 @@
 
 .section-advice__blocks__item-title-text {
   font-weight: 400;
+}
+
+.section-causes__blocks__item {
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .block-item-text {

@@ -99,7 +99,7 @@
   height: 100vh;
   min-height: 668px;
   margin-bottom: 60px;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
 }
 
 @media (max-width: 455px) {

@@ -313,8 +313,7 @@
   }
 }
 
-.section-why__blocks,
-.section-advice__blocks {
+.section__blocks {
   display: flex;
   flex-direction: column;
   gap: 20px;

@@ -170,22 +170,24 @@
   text-shadow: 4px 4px 0 var(--main-title-shadow-color);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 95.7px;
   }
 }
 
 .header-block-item-title {
   justify-self: flex-end;
   align-self: center;
-  width: calc(50% - 6px);
+  width: calc(50% - 11px);
   color: var(--accent-color-theme-dark-header-text);
   font-family: var(--font-family), sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
+  margin-bottom: 17px;
 }
 
 @media (max-width: 455px) {
